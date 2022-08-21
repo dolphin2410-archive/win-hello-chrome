@@ -1,0 +1,14 @@
+[package]
+name = "win-auth"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "win_auth"
+crate-type = ["cdylib"]
+
+[dependencies]
+thiserror = "1.0.32"
+windows = { version = "0.39.0", features = ["Security_Credentials", "Foundation"] }
+chrome-native = { version = "1.0.0", features = ["macros"] }
+serde = { version = "1.0.143", features = ["derive"] }
